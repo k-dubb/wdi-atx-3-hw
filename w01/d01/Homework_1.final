@@ -1,0 +1,62 @@
+Last login: Mon Nov 30 21:08:55 on ttys003
+nvm is not compatible with the npm config "prefix" option: currently set to "/Users/Kelli/.nvm/versions/node/v5.1.0"
+Run `npm config delete prefix` or `nvm use --delete-prefix v5.1.0 --silent` to unset it.
+kelli ~/Desktop/kitchen
+$ ls
+cans.txt  fridge/  pantry/
+kelli ~/Desktop/kitchen
+$ rm cans.txt
+removed ‘cans.txt’
+kelli ~/Desktop/kitchen
+$ cd pantry/
+kelli ~/Desktop/kitchen/pantry
+$ mv crisper-drawer/ ..
+‘crisper-drawer/’ -> ‘../crisper-drawer’
+kelli ~/Desktop/kitchen/pantry
+$ cd ..
+kelli ~/Desktop/kitchen
+$ mv crisper-drawer/ fridge/
+‘crisper-drawer/’ -> ‘fridge/crisper-drawer’
+kelli ~/Desktop/kitchen
+$ cd fridge
+kelli ~/Desktop/kitchen/fridge
+$ rm diapers.txt
+removed ‘diapers.txt’
+kelli ~/Desktop/kitchen/fridge
+$ cd freezer
+kelli ~/Desktop/kitchen/fridge/freezer
+$ rm couch.txt
+removed ‘couch.txt’
+kelli ~/Desktop/kitchen/fridge/freezer
+$ cd ..
+kelli ~/Desktop/kitchen/fridge
+$ cd crisper-drawer/
+kelli ~/Desktop/kitchen/fridge/crisper-drawer
+$ touch apples.txt
+kelli ~/Desktop/kitchen/fridge/crisper-drawer
+$ cd ..
+kelli ~/Desktop/kitchen/fridge
+$ mv trashcan/ ..
+‘trashcan/’ -> ‘../trashcan’
+kelli ~/Desktop/kitchen/fridge
+$ cd ..
+kelli ~/Desktop/kitchen
+$ cd trashcan/
+kelli ~/Desktop/kitchen/trashcan
+$ mv sink/ ..
+‘sink/’ -> ‘../sink’
+kelli ~/Desktop/kitchen/trashcan
+$ cd ..
+kelli ~/Desktop/kitchen
+$ cd sink/
+kelli ~/Desktop/kitchen/sink
+$ rm delete-me.txt
+removed ‘delete-me.txt’
+kelli ~/Desktop/kitchen/sink
+$ mkdir drying-rack/
+mkdir: created directory ‘drying-rack/’
+kelli ~/Desktop/kitchen/sink
+$ mv clean-dishes.txt drying-rack/
+‘clean-dishes.txt’ -> ‘drying-rack/clean-dishes.txt’
+kelli ~/Desktop/kitchen/sink
+$ 
