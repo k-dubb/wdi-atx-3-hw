@@ -10,3 +10,47 @@ Body Font Size = 12px
 Link Hover Color = #20222a
 
 */
+*{
+	box-sizing: border-box;
+}
+.clearfix{
+	overflow: auto;
+}
+header{
+	font-size: 40px;
+	font-family: Times;
+	color: #656565;
+}
+body{
+	margin: 50px;
+}
+h1{
+	font-size: 14px;
+	font-family: Times;
+	color: #656565;
+}
+p{
+	font-size: 12px;
+	line-height: 17px;
+	font-family: Times;
+	color: #656565;
+	display: block;
+	position: relative;
+}
+a:hover{
+	font-size: 12px;
+	line-height: 17px;
+	font-family: Times;
+	color: #20222a;
+	position: relative;
+}
+ul{
+	list-style-type: none;
+	width: 900px;
+	display: inline-block;	
+}
+li{
+	float: left;
+	width: 20%;
+	margin-right: 20px;
+}
