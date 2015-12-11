@@ -1,3 +1,74 @@
+$(function() {
+
+	$(function cdeposit() {
+				
+		$('#depositChecking').on('click', function() {
+			
+			var newCheckBalance = $('#amountChecking').val() + $('#checkingBalance').val();
+
+			$('#checkingBalance').html(newCheckBalance);
+
+		});
+
+	});
+
+
+	$(function cwithdrawal() {
+				
+		$('#withdrawChecking').on('click', function() {
+
+			if (($('#amountChecking').val()) > ($('#checkingBalance').val())) {
+
+				return false;
+			}
+
+			else { 
+				
+				var updatedCheckBalance = ($('#checkingBalance').val()) - ($('#amountChecking').val()); 
+			
+				$('checkingBalance').html(updatedCheckBalance);
+			}
+
+		});
+
+	});
+
+
+	$(function sdeposit() {
+
+		$('#depositSavings').on('click', function() {
+			
+			var newSaveBalance = $('#amountSavings').val() + $('#savingsBalance').val();
+
+			$('#savingsBalance').html(newSaveBalance);
+
+		});
+
+	});
+
+
+	$(function swithdrawal() {
+				
+		$('#withdrawSavings').on('click', function() {
+
+			if (($('#amountSavings').val()) > ($('#savingsBalance').val())) {
+
+				return false;
+			}
+
+			else { 
+				
+				var updatedSaveBalance = ($('#savingsBalance').val()) - ($('#amountSavings').val()); 
+			
+				$('savingsBalance').html(updatedSaveBalance);
+			}
+
+		});
+
+	});
+
+});
+
 //Begin with the document ready function
 
 	//Begin work on the Checking Account
@@ -21,6 +92,8 @@
 
 				//Else subtract that value from the current amount in the checking account
 
+
+
 	//Begin work on the Savings account
 
 		//Savings account deposit function
@@ -30,6 +103,9 @@
 		 		//On click of the depositSavings button
 
 		 			//Take that value and add it to the existing value in the savingsBalance div
+
+		
+
 
 		//Savings account withdraw funtion 
 
