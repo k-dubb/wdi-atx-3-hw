@@ -1,71 +1,97 @@
 $(function() {
 
+var total = 0;
+
 	$(function cdeposit() {
-				
+	
 		$('#depositChecking').on('click', function() {
 			
-			var newCheckBalance = $('#amountChecking').val() + $('#checkingBalance').val();
+			var newCheckBalance = parseInt($('#amountChecking').val());
 
-			$('#checkingBalance').html(newCheckBalance);
+			total = newCheckBalance + total;
 
+			$('#checkingBalance').text('$' + total);
+
+		});
+
+		$('#depositChecking').on('click', function() {
+
+			$('#amountChecking').val("");
+		
 		});
 
 	});
 
-
 	$(function cwithdrawal() {
-				
+			
 		$('#withdrawChecking').on('click', function() {
 
-			if (($('#amountChecking').val()) > ($('#checkingBalance').val())) {
+			if (parseInt($('#amountChecking').val()) > ($('#checkingBalance').val())){
 
-				return false;
+			return false;
 			}
 
 			else { 
-				
-				var updatedCheckBalance = ($('#checkingBalance').val()) - ($('#amountChecking').val()); 
+		
+				var updatedCheckBalance = parseInt($('#amountChecking').val()); 
+		
+				total = total - updatedCheckBalance;
 			
-				$('checkingBalance').html(updatedCheckBalance);
+				$('#checkingBalance').text('$' + total);
 			}
 
 		});
 
 	});
 
-
 	$(function sdeposit() {
-
+	
 		$('#depositSavings').on('click', function() {
 			
-			var newSaveBalance = $('#amountSavings').val() + $('#savingsBalance').val();
+			var newSaveBalance = parseInt($('#amountSavings').val());
 
-			$('#savingsBalance').html(newSaveBalance);
+			total = newSaveBalance + total;
+
+			$('#savingsBalance').text('$' + total);
 
 		});
 
-	});
+		$('#depositSavings').on('click', function() {
 
+			$('#amountSavings').val("");
+		});
+
+	});
 
 	$(function swithdrawal() {
 				
 		$('#withdrawSavings').on('click', function() {
 
-			if (($('#amountSavings').val()) > ($('#savingsBalance').val())) {
+			if (parseInt($('#amountSavings').val()) > ($('#savingsBalance').val())){
 
 				return false;
 			}
 
 			else { 
-				
-				var updatedSaveBalance = ($('#savingsBalance').val()) - ($('#amountSavings').val()); 
 			
-				$('savingsBalance').html(updatedSaveBalance);
+				var updatedSaveBalance = parseInt($('#amountSavings').val()); 
+			
+				total = total - updatedSaveBalance;
+				
+				$('#savingsBalance').text('$' + total);
 			}
 
 		});
 
-	});
+/*		change color: 
+
+			if ($('#savingsBalance').val(0))(function () {
+
+				$('.account').css('background-color: #F52F4F, color: #FFFFFF');
+
+			});
+*/
+	}); 
 
 });
 
@@ -103,8 +129,6 @@ $(function() {
 		 		//On click of the depositSavings button
 
 		 			//Take that value and add it to the existing value in the savingsBalance div
-
-		
 
 
 		//Savings account withdraw funtion 
