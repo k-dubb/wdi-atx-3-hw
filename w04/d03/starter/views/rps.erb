@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    <p><%= game = @game.shuffle[0] %></p> 
+    
+    <% if game == "rock" %>
+       <%= "The computer chose rock. You tie!" %> 
+    <% elsif game == "paper"%>
+        <%= "The computer chose paper. You lose." %>
+    <% else game == "scissors"%>
+        <%= "The computer chose paper. You win!" %>
+    <% end %>
+    </p>
+
+</body>
+</html>
